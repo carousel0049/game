@@ -1,0 +1,141 @@
+.ticket_card {
+  width: 350px;
+  height: 600px;
+  margin: 0 10px;
+  background: rgb(69,104,220);
+  background: linear-gradient(180deg, rgba(69,104,220,1) 0%, rgba(176,106,179,1) 74%);
+  padding: 15px;
+  &_in {
+    width: 100%;
+    min-height: 60%;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    position: relative;
+  }
+  &_header {
+    width: 100%;
+    &_title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 0;
+      margin-bottom: 5px;
+      h3 {
+        font-size: 16px;
+        height: 25px;
+        color: #000;
+        font-weight: 300;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+        transition: all .5s ease;
+        cursor: pointer;
+        svg {
+          transition: all .5s ease;
+          font-size: 20px;
+          color: #666;
+          cursor: pointer;
+        }
+        &:hover {
+          svg {
+            color: #000;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    &_in {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 4px 0;
+      margin-bottom: 5px;
+      justify-content: flex-start;
+      p {
+        font-size: 14px;
+        color: #000;
+        font-weight: 300;
+        margin-right: 20px;
+      }
+      span {
+        font-size: 14px;
+        color: #666;
+        font-weight: 300;
+      }
+    }
+  }
+  &_numbers {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 5px 0 15px 0;
+    &_btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 3px;
+      transition: all .5s ease;
+      cursor: pointer;
+      color: #000;
+      background: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      border: 1px solid rgba(#999, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1px;
+      &--active {
+        background: #FFD205;
+        color: #000;
+        border: 1px solid #fff;
+        transform: scale(.95);
+      }
+      &:hover {
+        background: #FFD205;
+        color: #000;
+        border: 1px solid #fff;
+        transform: scale(.95);
+      }
+    }
+  }
+  &_actions {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    &_btn {
+      background: #fff;
+      border: 1px solid rgba(#999, 0.3);
+      font-size: 14px;
+      font-weight: 300;
+      color: #000;
+      border-radius: 100px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: all .5s ease;
+      &:hover {
+        background: #FFD205;
+        color: #000;
+        border: 1px solid #fff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ticket_card {
+    margin: 10px 0;
+  }
+}
