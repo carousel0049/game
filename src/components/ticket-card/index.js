@@ -1,6 +1,7 @@
 import './index.scss';
 import {memo} from 'react';
 import cn from "classnames";
+import PropTypes from "prop-types";
 import { BsMagic } from "react-icons/bs";
 import createArrayOfNumbers, {removeDuplicates} from "../../utils";
 
@@ -124,5 +125,17 @@ pending
     </div>
   );
 }
+
+TicketCard.propTypes = {
+  isTicketWon: PropTypes.bool,
+  onRandomGenerate: PropTypes.func.isRequired,
+  firstField: PropTypes.array.isRequired,
+  setFirstField: PropTypes.func.isRequired,
+  secondField: PropTypes.array.isRequired,
+  setSecondField: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  pending: PropTypes.bool.isRequired
+};
 
 export default memo(TicketCard);
